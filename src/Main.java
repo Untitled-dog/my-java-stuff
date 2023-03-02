@@ -1,21 +1,21 @@
 import java.io.IOException; // frick the IDE required because it said so
-import java.util.Scanner;  // Import the Scanner class
-import java.io.File;  // Import the File class
-import java.io.FileWriter;   // Import the FileWriter class
+import java.util.Scanner;  // Import the Scanner class to get user input
+import java.io.File;  // Import the File class for filez
+import java.io.FileWriter;   // Import the FileWriter class to write to things to said filez
 import java.io.FileNotFoundException;  // Import this class to handle errors
 
-import static java.lang.System.*;   // So I don't have to type 'system' a lot
+import static java.lang.System.*;   // So I don't have to type 'system' a lot and becuse the IDE recomended i did so
 
 public class Main {
     public static void loops(){
         out.println("looping");
-        int x = 10;
-        while(x != 0){
-            out.println( String.valueOf(x) );//how string to int?
+        int foos = 10;//just like in python `foos = 10` but more attributes
+        while(foos != 0){//just like python's while
+            out.println( String.valueOf(foos) );//how string to int?
             /* https://www.educative.io/answers/how-to-convert-an-integer-to-a-string-in-java
             * use the fricking [String.valueOf()] function
             * */
-            x -= 1;//this actually works?
+            foos -= 1;//this actually works?
         }
         out.println("done");
     }
@@ -27,12 +27,12 @@ public class Main {
             out.println("foo");
         }else{ out.println("not foo"); }//tell the user to correct their behavior
     }
-    public static void remove_file() {//using a function to remove the gay
-        File myObj = new File("gay.txt");
+    public static void remove_file() {//using a function to remove the foo
+        File myObj = new File("foo.txt");
         if (myObj.delete()) {
-            out.println("removed the gay");
+            out.println("removed the foo");
         } else {
-            out.println("Failed to remove the gay.");
+            out.println("Failed to remove the foo.");
         }
     }
     public static void files(){
@@ -61,7 +61,7 @@ public class Main {
             e.printStackTrace();
         }
         out.println("press enter to read the foo");
-        scan.nextLine();
+        scan.nextLine();// like MSDos's pause function
         /* RATIO; was lazy so didn't implement the read thing
         * instead just return user input
         * System.out.println(userinput); // nevermind java doesn't allow vars from things in try & catch
